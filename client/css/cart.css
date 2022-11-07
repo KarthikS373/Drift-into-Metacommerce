@@ -1,0 +1,619 @@
+:root {
+  --white: #fff;
+  --black: #111;
+  --primary: #9d9091;
+  --bg: #cdc4c4;
+  --bgs: rgb(224, 213, 213);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--black);
+  background-color: var(--bg);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: #282828;
+  font-family: "Myriad Pro Regular";
+}
+
+.shopping-cart {
+  width: 25px;
+  height: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--bcs);
+  z-index: 100;
+  transition: all 0.8s ease-in-out;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+}
+
+.logo span {
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.2rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .threeicon {
+    left: 30% !important;
+    top: 6% !important;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .dot {
+    width: 1.8rem !important ;
+    height: 1.8rem !important;
+    margin-left: 2rem;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    transition: 500ms ease-in-out;
+  }
+
+  .menu.show {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .nav-list {
+    padding: 10rem 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .nav-link {
+    font-weight: 500;
+  }
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 7rem !important;
+    font-size: 1.7rem;
+  }
+
+  .spanpromo {
+    position: absolute;
+    margin-top: 2.81rem;
+    font-size: medium !important;
+    margin-left: -2rem !important;
+  }
+}
+
+.plain-link {
+  color: #282828;
+  font-family: "Myriad Pro Regular";
+  font-size: medium;
+  background-color: transparent;
+  border: none;
+}
+
+/* SHOE */
+.row {
+  height: calc(100vh - 7rem);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+/* Nike Shoe */
+.shoe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.shoe-figure {
+  position: relative;
+  width: 37rem;
+  height: 37rem;
+  background-color: var(--black);
+  border-radius: 50%;
+  transition: opacity 1s ease-in-out !important;
+}
+
+.shoe-figure::before {
+  content: "";
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 85%;
+  height: 85%;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.shoe-img {
+  height: auto;
+  width: 55rem;
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(30deg);
+  transition: opacity 1s ease-in-out !important;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  background-color: var(--black);
+  transition: all 0.5s ease-in-out;
+}
+
+.dot:not(:last-child) {
+  margin-right: 0.7rem;
+}
+
+.dot.active {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary);
+  transition: all 0.5s ease-in-out;
+}
+
+.threeicon {
+  left: 25%;
+  top: 12%;
+  position: absolute !important;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.5s ease-in-out;
+}
+
+.threedicon {
+  width: 7rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.crossicon {
+  width: 7rem;
+  height: auto;
+  cursor: pointer !important;
+  z-index: 9999 !important;
+}
+
+.not-active {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: all 0.5s ease-in-out;
+}
+
+.info-subtitle {
+  font-size: 2.2rem;
+  color: #303030;
+  font-family: "Myriad Pro Regular";
+}
+
+.info-title {
+  color: #303030;
+  font-family: "Myriad Pro Bold";
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.info-description {
+  margin-bottom: 3rem;
+  color: #303030;
+  font-family: "Myriad Pro Regular";
+}
+
+.info-down {
+  font-family: "Myriad Pro Regular";
+  display: flex;
+  color: #303030;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.size-title,
+.count-title {
+  margin-bottom: 1rem;
+}
+
+.count-content button {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.size-total {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--black);
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 0.5rem;
+}
+
+.size-total.active {
+  background-color: #f68b1e;
+  color: var(--white);
+  box-shadow: -3px 12px 7px -6px rgba(219, 219, 219, 1);
+  -webkit-box-shadow: -3px 12px 7px -6px rgba(219, 219, 219, 1);
+  -moz-box-shadow: -3px 12px 7px -6px rgba(219, 219, 219, 1);
+}
+
+.size-total.active:hover {
+  background-color: #e4811c;
+  transition: all 0.3s ease-in-out;
+}
+
+.size-total:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.count-content {
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  width: 10rem;
+  height: 3rem;
+  background-color: #f68b1e;
+  color: var(--white);
+  box-shadow: -3px 12px 7px -6px rgba(219, 219, 219, 1);
+  -webkit-box-shadow: -3px 12px 7px -6px rgba(219, 219, 219, 1);
+  -moz-box-shadow: -3px 12px 7px -6px rgba(219, 219, 219, 1);
+}
+
+.count-content:hover {
+  background-color: #e4811c;
+  transition: all 0.3s ease-in-out;
+}
+
+.count-content span {
+  font-size: 1.8rem;
+  color: var(--white);
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.price {
+  font-family: "Myriad Pro Regular";
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.price-title {
+  font-family: "Myriad Pro Bold" !important;
+  /* font-weight: 1000; */
+  font-size: 2rem;
+  color: #303030;
+}
+
+.price-button {
+  background-color: #f68b1e;
+  color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1.3rem 5rem;
+  box-shadow: -3px 12px 7px -6px rgba(219, 219, 219, 1);
+  -webkit-box-shadow: -3px 12px 7px -6px rgba(219, 219, 219, 1);
+  -moz-box-shadow: -3px 12px 7px -6px rgba(219, 219, 219, 1);
+}
+
+.price-button:hover {
+  background-color: #e4811c;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 840px) {
+  .row {
+    grid-template-columns: 1fr;
+    margin-top: 8rem;
+    overflow: visible;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .row {
+    margin-top: 4rem;
+  }
+
+  .shoe-figure {
+    width: 27rem;
+    height: 27rem;
+  }
+
+  .shoe-img {
+    width: 35rem;
+    top: 25%;
+  }
+
+  .info-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .info-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-description {
+    line-height: 1.2;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .price {
+    position: absolute;
+    left: 0;
+    margin-top: 4rem;
+    border-radius: 2rem 2rem 0 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+
+.spanpromo {
+  font-family: "Myriad Pro Regular";
+  color: blue;
+  font-size: large;
+}
+
+.spanpromo:hover {
+  color: blue;
+  text-decoration: underline blue;
+}
+
+/* down-div eli */
+.hireus {
+  position: sticky;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr;
+  background-color: #3575b6;
+  margin-top: -2rem !important;
+  color: white;
+  height: 80px;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.firsthire {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.firsthire h4 {
+  font-family: "Myriad Pro Regular";
+  letter-spacing: 1px;
+}
+
+.firsthire a {
+  font-family: "Myriad Pro Bold";
+  font-size: 30px;
+  letter-spacing: 0.6px;
+  text-decoration: underline;
+}
+
+.vrule {
+  border-left: 6px solid white;
+  height: 500px;
+}
+
+.secondhire {
+  font-family: "Myriad Pro Regular";
+  margin-left: -20rem;
+  margin-top: 10px;
+}
+
+.secondhire h4 {
+  letter-spacing: 1px;
+  margin-bottom: 5px !important;
+}
+
+.secondhire button {
+  font-family: "Myriad Pro Bold";
+  outline: none !important;
+  border: none !important;
+  font-size: 17px;
+  color: #3575b6;
+  background-color: white;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 15px;
+  height: 40px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+  margin-top: 2rem;
+  transition: opacity 1s ease-in-out !important;
+}
+
+.off {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  height: 0 !important;
+  width: 0 !important;
+  transition: opacity 1s ease-in-out !important;
+}
+
+/* down-div eli */
+@media only screen and (max-width: 768px) {
+  .hireus {
+    display: flex;
+    flex-direction: column;
+    margin-top: 11rem !important;
+    margin-bottom: 10px;
+    height: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .vrule {
+    border-left: none;
+    border-bottom: 1px solid white;
+    width: 90%;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    height: 30px;
+  }
+
+  .secondhire {
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-device-width: 500px) and (max-device-width: 1000px) {
+  .hireus {
+    margin-top: 52rem !important;
+  }
+
+  .vrule {
+    margin-left: -10rem !important;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .secondhire {
+    margin-left: -10rem;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  width: 100vw;
+}
+
+footer span {
+  display: flex;
+  justify-content: center;
+}
+
+footer div {
+  margin-left: 5px;
+  height: 7px;
+  width: 7px;
+  background-color: #303030aa;
+  border-radius: 50%;
+}
+
+footer div:first-child {
+  background-color: rgba(255, 166, 0, 0.756);
+}

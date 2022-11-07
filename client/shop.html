@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meta Commerce</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/toastify.css" />
+    <link rel="stylesheet" href="css/shop.css" />
+  </head>
+  <body>
+    <div class="exit-text">Esc to return home</div>
+    <div id="root"></div>
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <div class="overlay-wrapper">
+      <div class="overlay">
+        <h1>Review and pay for the purchase</h1>
+        <p>Press <span class="change-color">Enter</span> to use normal bank tranfer</p>
+        <p>Press <span class="change-color">Shift</span> to pay using crypto (Metamask)</p>
+      </div>
+    </div>
+    <script src="./js/three.js"></script>
+    <script src="./js/GLTFLoader.js" type="module"></script>
+    <script src="./src/shop/loadShop.js" type="module"></script>
+    <script src="./src/Utils/toastify.js"></script>
+    <script src="./js/flatte.min.js" type="module"></script>
+    <script src="./js/FBXLoader.js" type="module"></script>
+    <script src="./src/shop/shop.js" type="module"></script>
+  </body>
+</html>

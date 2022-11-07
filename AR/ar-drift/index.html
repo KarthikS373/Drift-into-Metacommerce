@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drift | AR</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+    />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <script src="https://unpkg.com/three@0.126.0/build/three.js"></script>
+    <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./app.css" />
+    <script src="./utils.js"></script>
+  </head>
+  <body>
+    <div id="enter-ar-info" class="mdc-card demo-card">
+      <h2>Drift AR Store</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam
+        quaerat odio aliquid odit adipisci sed facilis est inventore explicabo
+        aperiam omnis aut vel rem harum, voluptatem, ratione quos ea, sint quod
+        fuga facere quasi!
+      </p>
+
+      <a id="enter-ar" class="mdc-button mdc-button--raised mdc-button--accent">
+        Enter the store
+      </a>
+    </div>
+
+    <div id="unsupported-info" class="mdc-card demo-card">
+      <h2>Unsupported Browser</h2>
+      <p>Your browser does not support AR features with WebXR.</p>
+    </div>
+    <script src="app.js"></script>
+    <div id="stabilization"></div>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drift | Products</title>
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="css/view-cart.css" />
+  <link rel="stylesheet" href="css/toastify.css" />
+  <script src="./src/Utils/toastify.js"></script>
+  <script src="js/three.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/OBJLoader.js"></script>
+  <script src="js/GLTFLoader.js"></script>
+  <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="assets/Images/Logo_dark.png" alt="Logo" />
+        </a>
+      </div>
+
+      <div class="menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">3D View</a>
+          </li>
+          <li class="nav-item">
+            <a href="./tryon.html" class="nav-link">Virtual Tryon</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">View in your room</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <a href="#" class="cart" id="show-cart">
+        <img class="shopping-cart" src="assets/Icons/shopping cart.png" alt="" />
+      </a>
+
+      <div class="hamburger">
+        <img src="assets/Icons/menu.svg" alt="" />
+
+      </div>
+    </nav>
+  </header>
+
+  <main class="main container">
+    <div class="row">
+      <div id="shoe-div" class="shoe">
+        <div id="show-figure" class="shoe-figure"></div>
+
+        <img id="shoe-img" class="shoe-img" src="" alt="" />
+
+      </div>
+
+      <div class="info">
+        <div class="shoe-info">
+          <span class="info-subtitle">Nike</span>
+          <h1 class="info-title">Nike Air jordan 1</h1>
+          <p class="info-description">
+            This is a genuine product of Nike India Private Limited. The product comes with a standard brand warranty of
+            180 days.
+          </p>
+        </div>
+
+        <div class="info-down">
+          <div class="size">
+            <h3 class="size-title">Varient</h3>
+            <div class="size-content">
+              <button class="size-total active">8.6</button>
+              <button class="size-total">9</button>
+              <button class="size-total">9.5</button>
+            </div>
+          </div>
+
+          <div class="count">
+            <h3 class="count-title">Count</h3>
+            <div class="count-content">
+              <button id="item__decrement">-</button>
+              <span id="item_count">1</span>
+              <button id="item__increment">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="price">
+          <span class="price-title">Rs 8,295</span>
+          <a class="price-button" id="add-to-cart">ADD TO CART</a>
+
+        </div>
+
+        <footer>
+          <span>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </span>
+        </footer>
+
+  </main>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="src/tryon/cart.js"></script>
+  <script src="src/tryon/view-cart.js" type="module"></script>
+  <script src="src/tryon/products.js" type="module"></script>
+</body>
+
+</html>

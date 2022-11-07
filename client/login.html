@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css" />
+    <title>Drift | Login</title>
+  </head>
+  <body>
+    <div class="login-box" id="signin">
+      <h2>Login</h2>
+      <form id="form-signin">
+        <div class="user-box">
+          <input type="text" name="" required="" id="signin-name" />
+          <label>Username</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="" required="" id="signin-passwd" />
+          <label>Password</label>
+        </div>
+        <a class="redirect-back" id="submit-signin">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
+      </form>
+      <div class="create" id="toSignup">Don't have an account?</div>
+    </div>
+    <div class="login-box hide" id="signup">
+      <h2>Sign Up</h2>
+      <form id="form-signup">
+        <div class="user-box">
+          <input type="text" name="" required="" />
+          <label>Username</label>
+        </div>
+        <div class="user-box">
+          <input type="email" name="" required="" />
+          <label>Email</label>
+        </div>
+        <div class="user-box">
+          <input type="email" name="" required="" />
+          <label>Phone</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="" required="" />
+          <label>Password</label>
+        </div>
+        <a class="redirect-back" id="submit-signup">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
+      </form>
+      <div id="toSignin" class="create">Already have an account?</div>
+    </div>
+    <script src="./src/UI/login.js"></script>
+  </body>
+</html>

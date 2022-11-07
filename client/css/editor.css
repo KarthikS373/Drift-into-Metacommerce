@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.color-picker-container {
+  position: absolute;
+  top: 360px;
+  left: 5px;
+}
+
+canvas {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+#save {
+  z-index: 100;
+  color: white;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+  padding: 10px 12px;
+  background-color: rgb(74, 74, 127);
+  border-radius: 12px;
+}
+
+figure {
+  color: white;
+  height: 80px;
+  width: 80px;
+  padding: 10px;
+  text-align: center;
+  border: white 0.001px solid;
+  cursor: pointer;
+}
+
+.container {
+  position: fixed;
+  top: 60px;
+  left: 5px;
+  padding: 12px 16px;
+  border: white 0.05px dotted;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: max-content;
+}
+
+.options.active {
+  background-color: orange;
+}
+
+#namespace {
+  width: max-content;
+  background-color: transparent;
+  border: white 0.2px solid;
+  padding: 10px 15px;
+  color: white;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}

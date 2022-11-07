@@ -1,0 +1,159 @@
+@font-face {
+  font-family: FontName;
+  src: url("./fortnite.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  font-family: "gameFont";
+  background-size: cover;
+  background-position: center;
+
+  --color-1: #ffffff;
+  --color-2: #319236;
+  --color-3: #4c51f7;
+  --color-4: #9d4dbb;
+  --color-5: #f3af19;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+  background-color: black;
+  z-index: -1;
+}
+
+.root {
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  color: rgb(124, 82, 166);
+  font-size: x-large;
+  height: 40vh;
+}
+
+.landing {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+.landing h1 {
+  font-size: 10rem;
+  padding-top: 15%;
+  color: var(--color-1);
+}
+.landing p {
+  font-size: 2rem;
+}
+.landing button {
+  font-family: FontName;
+  font-size: 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  background: black;
+  color: var(--color-5);
+  border: 1px solid var(--color-5);
+  text-shadow: 0 0 2px black;
+  box-shadow: 0 0 15px var(--color-5);
+}
+
+.slide {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  height: 20px;
+  background: linear-gradient(90deg, #00ff00 25%, #ffc0cb00 0%);
+  border: 1px solid white;
+  box-shadow: 0px 0px 4px white;
+}
+
+:root {
+  --radio_20: 40px;
+  --radio_10: 20px;
+  --radio_-10: -20px;
+}
+
+.pointer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(1, 1, 1, 0);
+  width: var(--radio_20);
+  height: var(--radio_20);
+  margin-left: var(--radio_-10);
+  margin-top: var(--radio_-10);
+  border-radius: 50%;
+  border: 4px solid rgb(255, 47, 0);
+  opacity: 0.5;
+}
+
+.pointer::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #cccccc;
+  width: 1px;
+  height: 60px;
+  margin-left: -1px;
+  margin-top: -30px;
+}
+.pointer::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #cccccc;
+  width: 60px;
+  height: 1px;
+  margin-left: -30px;
+  margin-top: -1px;
+}
+
+#mic {
+  z-index: 1000;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+
+#video {
+  background: url("../assets/Icons/video.png") no-repeat;
+  background-size: 50px 50px;
+  z-index: 1000;
+  position: fixed;
+  cursor: pointer;
+  top: 5px;
+  right: 80px;
+  color: white;
+  height: 50px;
+  width: 50px;
+}
+
+.mute {
+  background: url("../assets/Icons/mute.png") no-repeat;
+  background-size: 40px 40px;
+}
+
+.talk {
+  background: url("../assets/Icons/microphone.png") no-repeat;
+  background-size: 40px 40px;
+}

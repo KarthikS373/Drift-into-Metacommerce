@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro Screen</title>
+    <link rel="stylesheet" href="css/home.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar__tabs">
+        <img src="assets/Images/Logo_light.png" alt="" />
+      </div>
+      <div class="navbar__tabs">
+        <ul class="navbar__list">
+          <li><a href="./editor.html">Business Collaboration</a></li>
+          <!-- <li><a href="./tryon.html">Virtual tryon</a></li>
+          <li><a href="./cart.html"> 3D shop</a></li> -->
+          <!-- <li><a href="./editor.html">Start a Business</a></li> -->
+        </ul>
+      </div>
+      <div class="navbar__tabs">
+        <button id="login">Login</button>
+      </div>
+    </nav>
+    <div class="header centered">
+      <div class="overlay full"></div>
+      <p>Presenting to you</p>
+      <p>DRIFT</p>
+      <link
+        href="https://fonts.googleapis.com/css?family=Lato|Roboto:400,900"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <div class="container">
+        <div class="btn">
+          <svg width="277" height="62">
+            <defs>
+              <linearGradient id="grad1">
+                <stop offset="0%" stop-color="#FF8285" />
+                <stop offset="100%" stop-color="#E178EE" />
+              </linearGradient>
+            </defs>
+            <rect
+              x="5"
+              y="5"
+              rx="25"
+              fill="none"
+              0
+              stroke="url(#grad1)"
+              width="266"
+              height="50"
+            ></rect>
+          </svg>
+          <span>Drift into metaverse</span>
+        </div>
+      </div>
+    </div>
+    <div id="container"></div>
+    <video
+      id="myVideo"
+      autoplay
+      controls
+      loop
+      width="640"
+      height="320"
+      style="display: none"
+      crossorigin="anonymous"
+    >
+      <source
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/61062/rin-SD.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <footer class="footer">
+      <a href="https://linktr.ee/humblefool" target="_blank">Made with 🤍</a>
+    </footer>
+    <script>
+      const login = document.getElementById("login");
+      login.innerHTML = localStorage.getItem("user") || "Login";
+      if (!localStorage.getItem("user"))
+        login.addEventListener("click", () => {
+          window.location.href = "./login.html";
+        });
+    </script>
+    <script src="./src/UI/HomeScreen.js"></script>
+  </body>
+</html>

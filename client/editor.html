@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drift | Business</title>
+    <link rel="stylesheet" href="css/editor.css" />
+    <script src="js/three.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three-gltf-loader@1.111.0/index.d.ts"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="js/GLTFExporter.js"></script>
+  </head>
+  <body>
+    <div class="editor">
+      <div class="color-picker-container">
+        <div class="color-picker"></div>
+      </div>
+      <input
+        type="text"
+        name="namespace"
+        id="namespace"
+        placeholder="Name of business"
+      />
+      <section class="container">
+        <figure class="options active" data-value="Cube">Cube</figure>
+        <figure class="options" data-value="Sphere">Sphere</figure>
+        <figure class="options" data-value="Torrus">Torrus</figure>
+        <figure class="options" data-value="Cylinder">Cylinder</figure>
+        <figure class="options" data-value="Cone">Cone</figure>
+        <figure class="options" data-value="Plane">Plane</figure>
+      </section>
+    </div>
+    <span id="save">save</span>
+    <canvas id="webgl"></canvas>
+    <script src="./src/editor/editor.js"></script>
+  </body>
+</html>

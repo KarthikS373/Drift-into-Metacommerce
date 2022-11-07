@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drift</title>
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/hexagon.css" />
+    <script src="js/three.js"></script>
+    <script src="js/LoaderUtils.js" type="module"></script>
+    <script src="js/flatte.min.js"></script>
+    <script src="js/FBXLoader.js"></script>
+    <script src="js/OBJLoader.js"></script>
+    <script src="js/GLTFLoader.js" type="module"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <div class="root"></div>
+    <div id="mic" class="mute"></div>
+    <div id="video"></div>
+
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+
+    <script src="src/index.js" type="module"></script>   
+    <script src="./src/Utils/feature.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCWrFKtBDdO5zanM4UcWufzY_tnC9ee3k4",
+        authDomain: "multiplayer-js.firebaseapp.com",
+        databaseURL: "https://multiplayer-js-default-rtdb.firebaseio.com",
+        projectId: "multiplayer-js",
+        storageBucket: "multiplayer-js.appspot.com",
+        messagingSenderId: "923504966865",
+        appId: "1:923504966865:web:6914826a3f7936782dd9f0",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./src/Utils/sockets.js" type="module"></script>
+    <script src="./src/editor/main.js" type="module"></script>
+  </body>
+</html>

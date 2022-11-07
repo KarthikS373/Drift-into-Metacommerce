@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Helvetica, sans-serif;
+    color: #60AEFE;
+}
+
+@media (min-width: 750px) {
+    .payments {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: stretch;
+        min-width: 750px;
+    }
+
+    .plan {
+        border: 1px solid rgba(29, 25, 25, 0.3);
+        border-radius: 15px;
+        padding: 10px 28px;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 3px;
+    }
+
+    .plan img {
+        display: block;
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .plan h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2em;
+        font-weight: bold;
+        color: #72C1FD;
+        margin-bottom: .5em;
+        margin-top: .5em;
+    }
+
+    hr {
+        width: 20%;
+        height: 5px;
+        margin: 0 auto;
+        border: none;
+        color: #72C1FD;
+    }
+
+    .prices {
+        color: #F6626F;
+        margin: 1em auto;
+        text-align: center;
+        position: relative;
+        height: 4em;
+        padding: .3em;
+    }
+
+    .currency {
+        position: relative;
+        bottom: 1.5em;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .price {
+        font-size: 4em;
+        font-weight: bold;
+    }
+
+    .permonth {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    p:not(.prices) {
+        padding-left: 25%;
+        text-align: left;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    button {
+        display: block;
+        margin: 2em auto;
+        background-color: #60AEFE;
+        color: #FFFFFF;
+        padding: 1em;
+        width: 60%;
+        border: none;
+        font-weight: 600;
+        border-radius: 5px;
+    }
+
+    button:hover,
+    button:focus {
+        cursor: pointer;
+    }
+
+}
+
+/*min 749*/
+@media (max-width: 749px) {
+    .payments {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        min-width: 750px;
+    }
+
+    .plan {
+        width: 100%;
+        max-width: 500px;
+        background-color: #FFFFFF;
+        margin: 3px;
+    }
+
+    .plan img {
+        display: none;
+
+    }
+
+    .plan h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2em;
+        font-weight: bold;
+        color: #72C1FD;
+        margin-bottom: .5em;
+        margin-top: .5em;
+    }
+
+    hr {
+        width: 20%;
+        height: 5px;
+        margin: 0 auto;
+        border: none;
+        color: #72C1FD;
+    }
+
+    .prices {
+        color: #F6626F;
+        margin: 1em auto;
+        text-align: center;
+        position: relative;
+        height: 4em;
+        padding: .3em;
+    }
+
+    .currency {
+        position: relative;
+        bottom: 1.5em;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .price {
+        font-size: 4em;
+        font-weight: bold;
+    }
+
+    .permonth {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    p:not(.prices) {
+        padding-left: 25%;
+        text-align: left;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    button {
+        display: block;
+        margin: 2em auto;
+        background-color: #60AEFE;
+        color: #FFFFFF;
+        padding: 1em;
+        width: 60%;
+        border: none;
+        font-weight: 600;
+        border-radius: 5px;
+    }
+
+    button:hover,
+    button:focus {
+        cursor: pointer;
+    }
+}
+
+/*max 749px*/
